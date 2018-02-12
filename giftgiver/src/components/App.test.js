@@ -25,6 +25,12 @@ it('adds a new gift to `state` when clicking `add gift` button', () => {
     expect(app.state().gifts).toEqual([{id: 1}])
 });
 
-it('', () => {
-    
+it('adds a new gift the the rendered list, when clcking the `add gift` button', () => {
+    //carefully here, the button gets clicked twice, so the 
+    //element in the test is already at 2 eleemts
+    // -> its a test pollution
+    // make this test an isolated instance
+
+    app.find('.btn-add').simulate('click');
+    expect(app.find('.gift-list').children().length).toEqual(2);
 })

@@ -24,11 +24,22 @@ class App extends Component{
     }
 
     render() {
+
         return (<div>
             {/* adding this will make the test fail
                 use runner jest-cli do update failing snapshots
             */}
             <h2>gift giver</h2>
+            <div className="gift-list">
+                {
+                    this.state.gifts.map(gift => {
+                        return (
+                            <div key={gift.id}>id : {gift.id}</div>
+                        )
+                    })
+                }
+            </div>
+           
             <Button
                 className="btn-add"
                 onClick={this.addGift}
