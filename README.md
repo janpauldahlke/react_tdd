@@ -12,3 +12,4 @@
 - using react-bootstrap for styling convinience
 - make sure to have latest react && react-dom
 - ```npm install react react-dom```
+- i removed verything from /src to start from scratch
