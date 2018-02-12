@@ -12,3 +12,8 @@ const app = shallow(<App />);
 it('renders App correctly', () => {
     expect(app).toMatchSnapshot();
 });
+
+it('initializes the `state` with an empty list of gifts', () => {
+    //app.state to reach for state
+    expect(app.state().gifts).toEqual([]);
+});

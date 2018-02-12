@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 
 class App extends Component{
 
+    constructor(props){
+        super(props)
+
+        this.state = {
+            gifts : []
+        }
+    }
+
     render() {
         return (<div>
             {/* adding this will make the test fail
