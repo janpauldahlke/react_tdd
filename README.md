@@ -13,3 +13,8 @@
 - make sure to have latest react && react-dom
 - ```npm install react react-dom```
 - i removed verything from /src to start from scratch
+
+### test cli
+- ```npm run test```for watch suite
+- ```npm run test -- --coverage```for nice formatted table
+- to exclude files from test coverage use the "jest" object in package.json with !Bang operator (compare repo to see exmaple)
