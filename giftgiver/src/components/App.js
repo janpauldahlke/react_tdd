@@ -40,7 +40,11 @@ class App extends Component{
                 {
                     this.state.gifts.map(gift => {
                         return (
-                            <Gift key={gift.id} />
+                            <Gift
+                                gift={gift}
+                                removeGift={this.removeGift}
+                                key={gift.id}
+                            />
                         )
                     })
                 }

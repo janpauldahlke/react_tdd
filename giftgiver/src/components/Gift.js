@@ -40,6 +40,12 @@ class Gift extends Component{
                       value={this.state.present}
                     />
                   </FormGroup>
+                  <Button
+                    className="btn-remove"
+                    onClick={() => {
+                      this.props.removeGift(this.props.gift.id)
+                    }}
+                  >remove gift</Button>
                 </Form>
             </div>
         )
