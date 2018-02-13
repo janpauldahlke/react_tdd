@@ -31,7 +31,7 @@ class Gift extends Component{
                       value={this.state.person}
                     />
 
-                    <ControlLabel>Persent</ControlLabel>
+                    <ControlLabel>Present</ControlLabel>
                     <FormControl
                       onChange={e => {
                         this.setState({present: e.target.value})

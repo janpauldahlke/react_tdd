@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { shallow } from 'enzyme';
-import App from './App.js'; // this not exists yet // the test should fail
-
+import App from './App'; // this not exists yet // the test should fail
 
 describe('App', () => {
     // create jsx component app as shallow renderer
@@ -50,6 +49,11 @@ describe('App', () => {
                 //now in the scope of describe
                 expect(app.find('.gift-list').children().length).toEqual(1);
             });
-        })
+
+            it('creates a Gift Component', () => {
+                
+                expect(app.find('Gift').exists()).toBe(true);
+            })
+        });
 });
 

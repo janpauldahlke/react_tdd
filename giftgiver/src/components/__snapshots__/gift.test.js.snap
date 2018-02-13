@@ -43,7 +43,7 @@ ShallowWrapper {
                         bsClass="control-label"
                         srOnly={false}
                 >
-                        Persent
+                        Present
                 </ControlLabel>
                 <FormControl
                         bsClass="form-control"
@@ -82,7 +82,7 @@ ShallowWrapper {
                     bsClass="control-label"
                     srOnly={false}
           >
-                    Persent
+                    Present
           </ControlLabel>
           <FormControl
                     bsClass="form-control"
@@ -121,7 +121,7 @@ ShallowWrapper {
               bsClass="control-label"
               srOnly={false}
 >
-              Persent
+              Present
 </ControlLabel>,
             <FormControl
               bsClass="form-control"
@@ -168,11 +168,11 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "bsClass": "control-label",
-              "children": "Persent",
+              "children": "Present",
               "srOnly": false,
             },
             "ref": null,
-            "rendered": "Persent",
+            "rendered": "Present",
             "type": [Function],
           },
           Object {
@@ -229,7 +229,7 @@ ShallowWrapper {
                               bsClass="control-label"
                               srOnly={false}
                     >
-                              Persent
+                              Present
                     </ControlLabel>
                     <FormControl
                               bsClass="form-control"
@@ -268,7 +268,7 @@ ShallowWrapper {
                         bsClass="control-label"
                         srOnly={false}
             >
-                        Persent
+                        Present
             </ControlLabel>
             <FormControl
                         bsClass="form-control"
@@ -307,7 +307,7 @@ ShallowWrapper {
                 bsClass="control-label"
                 srOnly={false}
 >
-                Persent
+                Present
 </ControlLabel>,
               <FormControl
                 bsClass="form-control"
@@ -354,11 +354,11 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "bsClass": "control-label",
-                "children": "Persent",
+                "children": "Present",
                 "srOnly": false,
               },
               "ref": null,
-              "rendered": "Persent",
+              "rendered": "Present",
               "type": [Function],
             },
             Object {
