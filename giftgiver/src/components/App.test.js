@@ -20,20 +20,36 @@ describe('App', () => {
         expect(app.state().gifts).toEqual([]);
     });
 
-    it('adds a new gift to `state` when clicking `add gift` button', () => {
-        //find the button
-        app.find('.btn-add').simulate('click');
-        //expect results
-        expect(app.state().gifts).toEqual([{id: 1}])
-    });
+        describe('when clicking the `add gift` button', () => {
 
-    it('adds a new gift the the rendered list, when clcking the `add gift` button', () => {
-        //carefully here, the button gets clicked twice, so the 
-        //element in the test is already at 2 eleemts
-        // -> its a test pollution
-        // make this test an isolated instance
+            //do beforeEach test
+            beforeEach(() => {
+                app.find('.btn-add').simulate('click');
+            });
 
-        app.find('.btn-add').simulate('click');
-        expect(app.find('.gift-list').children().length).toEqual(2);
-    })
-})
+            //each test cleans up, so there will be no test pollution anymore
+            afterEach( () => {
+                //one needs to reset state to empty []
+                app.setState({ gifts: []});
+            });
+
+            it('adds a new gift to `state`', () => {
+                //find the button
+                
+                //expect results
+                expect(app.state().gifts).toEqual([{id: 1}])
+            });
+        
+            it('adds a new gift the the rendered list', () => {
+                //carefully here, the button gets clicked twice, so the 
+                //element in the test is already at 2 eleemts
+                // -> its a test pollution
+                // make this test an isolated instance
+        
+                //app.find('.btn-add').simulate('click');
+                //now in the scope of describe
+                expect(app.find('.gift-list').children().length).toEqual(1);
+            });
+        })
+});
+
