@@ -18,15 +18,21 @@ describe('Gift', () => {
 
     describe('when typing into the person input', () => {
 
-        const person = 'Peter Parker'
+        const person = 'Peter Parker';
+        const present = 'champagne'
 
         beforeEach(() => {
             //http://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html
             gift.find('.input-person').simulate('change', { target: { value : person}})
+            gift.find('.input-present').simulate('change', {target : { value: present}})
         })
 
         it('updates the person in `state`', () => {
             expect(gift.state().person).toEqual(person)
+        })
+
+        it('updates the present in `state`', () => {
+            expect(gift.state().present).toEqual(present);
         })
 
     })

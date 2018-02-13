@@ -39,6 +39,19 @@ ShallowWrapper {
                         onChange={[Function]}
                         value=""
                 />
+                <ControlLabel
+                        bsClass="control-label"
+                        srOnly={false}
+                >
+                        Persent
+                </ControlLabel>
+                <FormControl
+                        bsClass="form-control"
+                        className="input-present"
+                        componentClass="input"
+                        onChange={[Function]}
+                        value=""
+                />
         </FormGroup>
 </Form>,
     },
@@ -61,6 +74,19 @@ ShallowWrapper {
           <FormControl
                     bsClass="form-control"
                     className="input-person"
+                    componentClass="input"
+                    onChange={[Function]}
+                    value=""
+          />
+          <ControlLabel
+                    bsClass="control-label"
+                    srOnly={false}
+          >
+                    Persent
+          </ControlLabel>
+          <FormControl
+                    bsClass="form-control"
+                    className="input-present"
                     componentClass="input"
                     onChange={[Function]}
                     value=""
@@ -91,6 +117,19 @@ ShallowWrapper {
               onChange={[Function]}
               value=""
 />,
+            <ControlLabel
+              bsClass="control-label"
+              srOnly={false}
+>
+              Persent
+</ControlLabel>,
+            <FormControl
+              bsClass="form-control"
+              className="input-present"
+              componentClass="input"
+              onChange={[Function]}
+              value=""
+/>,
           ],
         },
         "ref": null,
@@ -115,6 +154,34 @@ ShallowWrapper {
             "props": Object {
               "bsClass": "form-control",
               "className": "input-person",
+              "componentClass": "input",
+              "onChange": [Function],
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "control-label",
+              "children": "Persent",
+              "srOnly": false,
+            },
+            "ref": null,
+            "rendered": "Persent",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "bsClass": "form-control",
+              "className": "input-present",
               "componentClass": "input",
               "onChange": [Function],
               "value": "",
@@ -158,6 +225,19 @@ ShallowWrapper {
                               onChange={[Function]}
                               value=""
                     />
+                    <ControlLabel
+                              bsClass="control-label"
+                              srOnly={false}
+                    >
+                              Persent
+                    </ControlLabel>
+                    <FormControl
+                              bsClass="form-control"
+                              className="input-present"
+                              componentClass="input"
+                              onChange={[Function]}
+                              value=""
+                    />
           </FormGroup>
 </Form>,
       },
@@ -180,6 +260,19 @@ ShallowWrapper {
             <FormControl
                         bsClass="form-control"
                         className="input-person"
+                        componentClass="input"
+                        onChange={[Function]}
+                        value=""
+            />
+            <ControlLabel
+                        bsClass="control-label"
+                        srOnly={false}
+            >
+                        Persent
+            </ControlLabel>
+            <FormControl
+                        bsClass="form-control"
+                        className="input-present"
                         componentClass="input"
                         onChange={[Function]}
                         value=""
@@ -210,6 +303,19 @@ ShallowWrapper {
                 onChange={[Function]}
                 value=""
 />,
+              <ControlLabel
+                bsClass="control-label"
+                srOnly={false}
+>
+                Persent
+</ControlLabel>,
+              <FormControl
+                bsClass="form-control"
+                className="input-present"
+                componentClass="input"
+                onChange={[Function]}
+                value=""
+/>,
             ],
           },
           "ref": null,
@@ -234,6 +340,34 @@ ShallowWrapper {
               "props": Object {
                 "bsClass": "form-control",
                 "className": "input-person",
+                "componentClass": "input",
+                "onChange": [Function],
+                "value": "",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "control-label",
+                "children": "Persent",
+                "srOnly": false,
+              },
+              "ref": null,
+              "rendered": "Persent",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bsClass": "form-control",
+                "className": "input-present",
                 "componentClass": "input",
                 "onChange": [Function],
                 "value": "",
