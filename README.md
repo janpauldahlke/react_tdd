@@ -23,3 +23,4 @@
 - can call bitcoin exhcange api
 - usese and tests redux
 - carefully work around the incompatibiliy of enzyme with react 16 using ```npm install enzyme-adapter-react-16```
+- also read https://hackernoon.com/testing-react-components-with-jest-and-enzyme-41d592c174f for more insights
