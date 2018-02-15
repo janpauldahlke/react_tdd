@@ -9,6 +9,21 @@ describe('balance tests', () =>{
 		const expectedAction = { type: constants.SET_BALANCE , balance };
 		
 		expect(actions.setBalance(balance)).toEqual(expectedAction);
-	})
+	});
+
+	it('creates an action to deposit into the balance', () => {
+		const deposit = 10;
+		const expectedAction = { type: constants.DEPOSIT, deposit };
+
+		expect(actions.deposit(deposit)).toEqual(expectedAction);
+	});
+	  
+		it('creates an action that can withdraw amount', () => {
+			const withdraw = 5;
+			const expectedAction = { type: constants.WITHDRAW, withdraw };
+
+			expect(actions.withdraw(withdraw)).toEqual(expectedAction);
+		})
+
 })
 

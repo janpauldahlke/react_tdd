@@ -28,4 +28,25 @@ describe('App', () => {
   it('renders App correctly', () => {
     expect(app).toMatchSnapshot();
   })
+
+
+  it('contains a connected Wallet component', () => {
+
+    //enzyme helper trick
+    //console.log(app.debug())
+    //returns in this case the conncet Wallet like this
+    /*
+     console.log src/components/App.test.js:35
+      <div>
+        <h2>
+          Loot Check
+        </h2>
+        <hr />
+        <Connect(Wallet) />
+      </div>
+    */
+
+    expect(app.find('Connect(Wallet)').exists()).toBe(true);
+  })
+
 })

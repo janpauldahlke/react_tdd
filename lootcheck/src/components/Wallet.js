@@ -20,4 +20,4 @@ export class Wallet extends Component {
 }
 //mapStateToProps, mapDispatchToProps
 //this export to react
-export default connect(state => { balance: state }, null)(Wallet);
+export default connect(state => { return  { balance: state }}, null)(Wallet);
