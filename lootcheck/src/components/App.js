@@ -7,7 +7,9 @@ class App extends Component{
 
 	render(){
 		return(
-			<div>iam app</div>
+			<div>
+				<h2>Loot Check</h2>
+			</div>
 		);
 	}
 }

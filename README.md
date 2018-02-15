@@ -22,3 +22,4 @@
 - saved in cookies
 - can call bitcoin exhcange api
 - usese and tests redux
+- carefully work around the incompatibiliy of enzyme with react 16 using ```npm install enzyme-adapter-react-16```
