@@ -9,13 +9,31 @@ import '../setupTests';
 //and import it via {Wallet} syntax in test !!
 export class Wallet extends Component {
 
-    render() {
-        return(
-            <div>
-                <h3 className="balance">Wallet Balance: {this.props.balance}</h3>
-            </div>
-        )
-    }
+	constructor(){
+		super()
+
+		this.state = {
+			balance : 0
+		}
+	}
+
+	changeBalance(e){
+		this.setState({balance: parseInt(e.target.value, 10)})
+	}
+
+
+	render() {
+		return(
+			<div>
+				<h3 className="balance">Wallet Balance: {this.props.balance}</h3>
+				<br />
+				<input
+					className="input-wallet"
+					onChange={this.changeBalance.bind(this)}
+				/>
+			</div>
+		)
+	}
 
 }
 //mapStateToProps, mapDispatchToProps
