@@ -56,6 +56,6 @@ export class Wallet extends Component {
 //mapStateToProps, mapDispatchToProps
 //this export to react
 export default connect(state => { return  {
-	balance: state
+	balance: state.balance
 }}, 
 {deposit, withdraw})(Wallet);

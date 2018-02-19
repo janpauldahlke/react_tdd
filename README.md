@@ -18,9 +18,12 @@
 - to exclude files from test coverage use the "jest" object in package.json with !Bang operator (compare repo to see exmaple)
 
 ### lootcheck
-- deposit and withdraw money from account
-- saved in cookies
-- can call bitcoin exhcange api
 - usese and tests redux
+- deposit and withdraw money from account
+- saved in cookies // testing cookie behavior
+- can call bitcoin exhcange api
+- test redux thunk and async actions
 - carefully work around the incompatibiliy of enzyme with react 16 using ```npm install enzyme-adapter-react-16```
 - also read https://hackernoon.com/testing-react-components-with-jest-and-enzyme-41d592c174f for more insights
+- to add async stuff ```npm install redux-thunk --save```
+- to able to test it do ```npm install redux-mock-store fetch-mock --save-dev```
