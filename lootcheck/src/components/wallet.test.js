@@ -3,9 +3,17 @@ import { shallow } from 'enzyme';
 
 import { Wallet } from './Wallet';
 
+
+
 describe('Wallet', () => {
+
+    //mock redux action
+    const mockDeposit = jest.fn();
+    //
+
     const balance = 20
-    const props = {balance: balance}
+    //add mockdeposit to props
+    const props = {balance: balance, deposit: mockDeposit}
 
     const wallet = shallow(<Wallet {...props}/>)
 
@@ -37,6 +45,18 @@ describe('Wallet', () => {
             expect(wallet.state().balance).toEqual(parseInt(userBalance, 10))
         })
 
-        //it('')
+
+        describe('and the user wants to make a deposit', () => {
+
+            beforeEach(() => {
+                wallet.find('.btn-deposit').simulate('click');
+
+            })
+
+            it('dispatches the `deposit()` it recieves from the deposit with the local balance', () => {
+                expect(mockDeposit).toHaveBeenCalledWith(parseInt(userBalance, 10));
+            })
+        })
+        
     })
 })

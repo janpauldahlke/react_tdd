@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
+import  {balance } from '../actions/balance'
 
 //due enzyme error, import this
 import '../setupTests';
@@ -13,12 +14,16 @@ export class Wallet extends Component {
 		super()
 
 		this.state = {
-			balance : 0
+			balance : undefined
 		}
 	}
 
-	changeBalance(e){
+	changeBalance = e => {
 		this.setState({balance: parseInt(e.target.value, 10)})
+	}
+
+	deposit = () => {
+		this.props.deposit(this.state.balance)
 	}
 
 
@@ -29,8 +34,12 @@ export class Wallet extends Component {
 				<br />
 				<input
 					className="input-wallet"
-					onChange={this.changeBalance.bind(this)}
+					onChange={this.changeBalance}
 				/>
+				<button
+					className="btn-deposit"
+					onClick={this.deposit}
+				>deposit</button>
 			</div>
 		)
 	}
