@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
-import  {balance } from '../actions/balance'
+import { deposit, withdraw } from '../actions/balance'
 
 //due enzyme error, import this
 import '../setupTests';
@@ -26,6 +26,10 @@ export class Wallet extends Component {
 		this.props.deposit(this.state.balance)
 	}
 
+	withdraw = () => {
+		this.props.withdraw(this.state.balance)
+	}
+
 
 	render() {
 		return(
@@ -40,6 +44,10 @@ export class Wallet extends Component {
 					className="btn-deposit"
 					onClick={this.deposit}
 				>deposit</button>
+				<button
+					className="btn-withdraw"
+					onClick={this.withdraw}
+				>withdraw</button>
 			</div>
 		)
 	}
@@ -47,4 +55,7 @@ export class Wallet extends Component {
 }
 //mapStateToProps, mapDispatchToProps
 //this export to react
-export default connect(state => { return  { balance: state }}, null)(Wallet);
+export default connect(state => { return  {
+	balance: state
+}}, 
+{deposit, withdraw})(Wallet);

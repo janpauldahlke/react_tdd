@@ -7,13 +7,13 @@ import { Wallet } from './Wallet';
 
 describe('Wallet', () => {
 
-    //mock redux action
+    //mock redux action deposit
     const mockDeposit = jest.fn();
-    //
-
+    //mock withdraw
+    const mockWithdraw = jest.fn();
     const balance = 20
     //add mockdeposit to props
-    const props = {balance: balance, deposit: mockDeposit}
+    const props = {balance: balance, deposit: mockDeposit, withdraw: mockWithdraw}
 
     const wallet = shallow(<Wallet {...props}/>)
 
@@ -50,11 +50,21 @@ describe('Wallet', () => {
 
             beforeEach(() => {
                 wallet.find('.btn-deposit').simulate('click');
-
             })
 
             it('dispatches the `deposit()` it recieves from the deposit with the local balance', () => {
                 expect(mockDeposit).toHaveBeenCalledWith(parseInt(userBalance, 10));
+            })
+        })
+
+        describe('and the user wants to withdraw from deposit', () => {
+
+            beforeEach(() => {
+                wallet.find('.btn-withdraw').simulate('click');
+            })
+
+            it('dispatches the `withdraw()` it recvies from the deposit with the local balance ', () => {
+                expect(mockWithdraw).toHaveBeenCalledWith(parseInt(userBalance, 10))
             })
         })
         
