@@ -1,17 +1,31 @@
 import balanceReducer from './balance';
+
+//cookie awareness reducer
+import balanceReducer2 from './balance'
+
 import * as constants from '../actions/constants';
 
 describe('balance reducer overall', () => {
 
-  it('sets a balance', () => {
-    const balance = 10;
-    //state of reducers as args;
-    //1st arg is undefined at start
-    //2nd arg is object containing data
-    expect(balanceReducer(undefined, { type: constants.SET_BALANCE, balance} ))
-      .toEqual(balance);
-  });
+    describe('when initializing', () => {
+      const balance = 10;
 
+    it('sets a balance', () => {
+      
+      //state of reducers as args;
+      //1st arg is undefined at start
+      //2nd arg is object containing data
+      expect(balanceReducer(undefined, { type: constants.SET_BALANCE, balance} ))
+        .toEqual(balance);
+    });
+
+    describe('then re-initialisation', () => {
+      it('reads the balance from cookies', () => {
+        expect(balanceReducer2(undefined, {})).toEqual(balance)
+      })
+    });
+  })
+  
   it('deposits a into the balance', () => {
     const deposit = 10;
     const initialState = 5;
@@ -28,5 +42,6 @@ describe('balance reducer overall', () => {
 
     expect(balanceReducer(initialState, {type: constants.WITHDRAW, withdraw} ))
       .toEqual(sum)
-  })
+  });
+
 });
