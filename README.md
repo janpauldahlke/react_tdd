@@ -28,4 +28,4 @@
 - to add async stuff ```npm install redux-thunk --save```
 - to able to test it do ```npm install redux-mock-store fetch-mock --save-dev```
 - ```npm run test -- --coverage```to gain buttiful table like this
-![coverage Report](https://imgur.com/a/a0iNg)
+![coverage Report](https://i.imgur.com/mhW6GcS.png)
