@@ -13,8 +13,17 @@
   https://www.udemy.com/react-tdd/learn/v4/t/lecture/7958264?start=0
 */
 
+/*
+  also note:
+  using lifecyle methods needs a disableLifecycleMethods flag to set to true
+  default here is false and so the mount ComponentDidDmount on Loot will not work
+  https://www.udemy.com/react-tdd/learn/v4/t/lecture/7958312?start=450
+*/
+
+
 
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
+configure( { disableLifecycleMethods : true});
